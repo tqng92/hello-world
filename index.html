@@ -1,11 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello World</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Berri & Cream</title>
+  <!-- Google Fonts for playful logo and clean text -->
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #F24C27;
+      --accent: #FFDDE1;
+      --white: #FFFFFF;
+      --text: #333333;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background-color: var(--accent);
+      line-height: 1.5;
+    }
+    header {
+      background-color: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .hero {
+      position: relative;
+      background: url('images/store1.jpg') center/cover no-repeat;
+      height: 60vh;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: #FFF;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 1rem;
+    }
+    .hero-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-family: 'Luckiest Guy', cursive;
+    }
+    .hero-content p {
+      font-size: 1rem;
+    }
+    section {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    section h2 {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+    .flavors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .flavor-card {
+      background: var(--white);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .flavor-card:hover {
+      transform: translateY(-5px);
+    }
+    .flavor-card img {
+      width: 100%;
+      display: block;
+    }
+    .flavor-card h3 {
+      margin: 0.75rem 0;
+      font-family: 'Luckiest Guy', cursive;
+      color: var(--text);
+    }
+    footer {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is my first GitHub Pages site.</p>
+  <header>
+    <h1>Berri & Cream</h1>
+    <p>Pure Happiness in Every Scoop</p>
+  </header>
+  <div class="hero">
+    <div class="hero-content">
+      <h2>Strawberry Soft Serve Delight</h2>
+      <p>Made fresh daily with love and the finest berries.</p>
+    </div>
+  </div>
+  <section>
+    <h2>Our Flavors</h2>
+    <div class="flavors">
+      <div class="flavor-card">
+        <img src="images/strawberry.jpg" alt="Strawberry Soft Serve">
+        <h3>Strawberry</h3>
+      </div>
+      <div class="flavor-card">
+        <img src="images/banana.jpg" alt="Banana Soft Serve">
+        <h3>Banana</h3>
+      </div>
+      <div class="flavor-card">
+        <img src="images/strawberry-banana.jpg" alt="Strawberry Banana Soft Serve">
+        <h3>Strawberry Banana</h3>
+      </div>
+      <div class="flavor-card">
+        <img src="images/chocolate-banana.jpg" alt="Chocolate Banana Soft Serve">
+        <h3>Chocolate Banana</h3>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>About Us</h2>
+    <p>Located at stall #55, Berri & Cream is committed to serving the freshest, happiest soft serves that bring a smile to your face. Swing by and taste the joy!</p>
+  </section>
+  <footer>
+    <p>Open Daily 11am - 9pm | Find us at #55</p>
+  </footer>
 </body>
 </html>
